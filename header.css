@@ -1,0 +1,33 @@
+header{
+    padding: 1rem 4rem;
+    margin: 1rem 5rem;
+    box-shadow: 0 0 1rem 0.5rem #00000069;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div{
+    border: 1px solid var(--borda);
+    padding: 0.3rem 0.5rem;
+}
+#pesquisa_cidade{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    width: 8rem;
+    transition: 0.3s;
+}
+#pesquisa_cidade::placeholder {
+    color: var(--letra);
+}
+.bi-search{
+    font-size: 1.1rem;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}

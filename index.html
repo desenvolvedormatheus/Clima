@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="corpo.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <title>Clima</title>
+</head>
+<body>
+    <!-- Fundos e audios relativos -->
+    <img id="fundo" alt="fundo">
+    <audio id="som" loop><source type="audio/mpeg"></audio>
+
+    <header>
+        <!-- Pesquisa de cidade -->
+        <div id="inputPesquisaCidade">
+                <input id="pesquisa_cidade" type="text" name="pesquisa_cidade" placeholder="Cidade" />
+                <button id="pesuisarCidade" ><i class="bi bi-search" ></i></button>
+        </div>
+        <p id="descricao"></p>
+    </header>
+
+    <main>
+        <div class="graus_data_cidade">
+            <!-- graus, cidade data e hora, icone do clima atual -->
+            <p id="graus">00º</p>
+            <div>
+                <p id="cidade">Cidade</p>
+                <p id="datahora">14:00 - Quarta, 5 de Abril de 2023</p>
+            </div>
+            <i class="bi bi-cloud-sun-fill"></i>
+        </div>
+
+        <div class="maisInfos">
+            <!-- temperatura, clima, vento, umidade do ar, arco-íris, sol e lua -->
+            <div class="cardInfo">
+                <p class="titulo">Temperatura</p>
+                <div>
+                    <i class="bi bi-arrow-down"></i>
+                    <p id="temperaturaMinima">15º</p>
+                    <i class="bi bi-arrow-up"></i>
+                    <p id="temperaturaMaxima">29º</p>
+                </div>
+            </div>
+            <div class="cardInfo">
+                <p class="titulo">Chuva</p>
+                <div>
+                    <i class="bi bi-droplet-fill"></i>
+                    <p id="mmDeChuva">0mm -</p>
+                    <p id="porcentagemChuva">0%</p>
+                </div>
+            </div>
+            <div class="cardInfo">
+                <p class="titulo">Vento</p>
+                <div>
+                    <i class="bi bi-wind"></i>
+                    <p id="velocidadeVento">9km/h</p>
+                </div>
+            </div>
+            <div class="cardInfo">
+                <p class="titulo">Umindade do Ar</p>
+                <div>
+                    <i class="bi bi-droplet-half"></i>
+                    <p id="umidade">51%</p>
+                </div>
+            </div>
+            <div class="cardInfo">
+                <p class="titulo">Sol</p>
+                <div>
+                    <i class="bi bi-brightness-alt-high"></i>
+                    <p id="nascerSol">06:15 -</p>
+                    <p id="porSol">18:01</p>
+                </div>
+            </div>
+            <div class="cardInfo">
+                <p class="titulo">Lua</p>
+                <div>
+                    <i class="bi bi-moon-fill"></i>
+                    <p id="lua">Crescente</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous" defer></script>
+    <script src="animacoes.js" defer></script>
+</body>
+</html>
