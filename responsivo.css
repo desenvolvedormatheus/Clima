@@ -65,13 +65,22 @@
     .graus_data_cidade div p{
         font-size: 1rem;
     }
+    .maisInfos{
+        gap: 0;
+    }
+    .cardInfo{
+        width: 12rem;
+    }
 }
 @media (max-width: 290px){
     .cardInfo{
         transform: scale(1.3);
         margin-bottom: 1.5rem;
     }
-    .bi-cloud-sun-fill{
+    .bi-cloud-sun-fill, #descricao{
         display: none;
+    }
+    .maisInfos{
+        gap: 0;
     }
 }

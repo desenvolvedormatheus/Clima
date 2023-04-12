@@ -1,8 +1,3 @@
-// Animação do input de pesquisa
-$("#inputPesquisaCidade").click(() => {
-    $("#pesquisa_cidade").css("width", "18rem");
-});
-
 // data e hora atuais
 $(document).ready(function() {
     let dataHoraAtual = new Date();
@@ -23,7 +18,7 @@ $(document).ready(function() {
 
 // Função que é chamada quando as coordenadas são obtidas com sucesso
 function success(pos) {
-    let city = "aruja";
+    let city = "Guarulhos";
     const apichave = 'ec392aeb8368568c3d68c3c7fe112665';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apichave}&units=metric`;
     
