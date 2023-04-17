@@ -1,26 +1,43 @@
 // data e hora atuais
 $(document).ready(function() {
-    let dataHoraAtual = new Date();
-    let hora = `${dataHoraAtual.getHours()}:${dataHoraAtual.getMinutes()}`;
+    function ajustarHora(cidade = "guarulhos"){
+        // Define a URL da API World Time
+        let url = `http://api.worldweatheronline.com/premium/v1/tz.ashx?key=cbfcb5905bfe4125aaa22045231704&q=${cidade}&format=json`;
 
-    let diasDaSemana = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
-    let diaDaSemana = diasDaSemana[dataHoraAtual.getDay()];
+        // Faz uma chamada AJAX GET para a API
+        $.ajax({ url: url, type: "GET", dataType: "json",
+            success: function(data) {
+                // Extrai a hora atual da resposta da API
+                var horaMinuto = data.data.time_zone[0].localtime.slice(11, 16);
 
-    let diaDoMes = dataHoraAtual.getDate();
+                let dataHoraAtual = new Date();
+                let Semana = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+                let diaDaSemana = Semana[dataHoraAtual.getDay()];
+                let diaDoMes = dataHoraAtual.getDate();
+                let meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+                let mes = meses[dataHoraAtual.getMonth()];
+                let ano = dataHoraAtual.getFullYear();
+                $("#datahora").html(`${horaMinuto} - ${diaDaSemana}, ${diaDoMes} de ${mes} de ${ano}`)
+            }
+        });
+    }
+    ajustarHora()
 
-    let meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
-    let mes = meses[dataHoraAtual.getMonth()];
-
-    let ano = dataHoraAtual.getFullYear();
-
-    $("#datahora").html(`${hora} - ${diaDaSemana}, ${diaDoMes} de ${mes} de ${ano}`)
+    // Mudar cidade
+    $("#pesuisarCidade").click(function() {
+        event.preventDefault();
+        let cidade = $("#pesquisa_cidade").val()
+        console.log(cidade)
+        success(cidade)
+        ajustarHora(cidade)
+    });
 }); 
 
 // Função que é chamada quando as coordenadas são obtidas com sucesso
-function success(pos) {
-    let city = "Guarulhos";
+function success(cidade = "guarulhos") {
+    let city = cidade;
     const apichave = 'ec392aeb8368568c3d68c3c7fe112665';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apichave}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apichave}&units=metric`;
     
     $.getJSON(url, function(data) {
 
