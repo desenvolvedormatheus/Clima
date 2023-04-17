@@ -27,7 +27,6 @@ $(document).ready(function() {
     $("#pesuisarCidade").click(function() {
         event.preventDefault();
         let cidade = $("#pesquisa_cidade").val()
-        console.log(cidade)
         success(cidade)
         ajustarHora(cidade)
     });
@@ -51,14 +50,17 @@ function success(cidade = "guarulhos") {
         // sons e fundos relativos
         if(descricao === "Clear"){
             $("#fundo").attr("src", "imgs/fundosol.jpg");
+            let som = $("#som").get(0); som.volume = 0.1; som.pause();
         } else if(descricao === "Thunderstorm" || descricao === "Rain"){
             $("#som").attr("src", "sons/somChuva.mp3");
             let som = $("#som").get(0); som.volume = 0.1; som.play();
             $("#fundo").attr("src", "imgs/fundochuva.jpg");
         } else if(descricao === "Snow"){
             $("#fundo").attr("src", "imgs/fundoneve.jpg");
+            let som = $("#som").get(0); som.volume = 0.1; som.pause();
         } else{
             $("#fundo").attr("src", "imgs/fundonublado.jpg");
+            let som = $("#som").get(0); som.volume = 0.1; som.pause();
         }
 
         // Graus atual
