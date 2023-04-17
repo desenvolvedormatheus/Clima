@@ -72,7 +72,12 @@ function success(cidade = "guarulhos") {
         $("#mmDeChuva").html(chuvaMm + "mm")
         
         const porcentoChuva = data.rain ? data.rain["pop"] : 0;
-        $("#porcentagemChuva").html(porcentoChuva + "%")
+        if (porcentoChuva == "undefined"){
+            $("#porcentagemChuva").html(porcentoChuva + "%")
+        }
+        else{
+            $("#porcentagemChuva").text("")
+        }
         
         $("#velocidadeVento").html(data.wind.speed + " km/h")
 
