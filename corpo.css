@@ -1,6 +1,6 @@
 main{
-    padding: 0 4rem;
-    margin: 0 5rem;
+    padding: 10px;
+    margin: 0 30px;
     box-shadow: 0 0 1rem 0.5rem #00000069;
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
@@ -11,17 +11,17 @@ main{
     align-items: center;
 }
 #graus{
-    font-size: 7rem;
+    font-size: clamp(50pt, 10vw, 100pt);
     font-weight: 500;
+    padding-right: 20px;
 }
 .graus_data_cidade div{
     margin-right: auto;
-    padding-left: 1.2rem;
 }
 #cidade{
-    font-size: 2.5rem;
+    font-size: clamp(20pt, 7vw, 50pt);
     font-weight: 500;
 }
 .bi-cloud-sun-fill{
-    font-size: 7rem;
+    font-size: clamp(40px, 10vw, 200px);
 }

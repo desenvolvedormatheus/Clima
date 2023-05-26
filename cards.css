@@ -2,22 +2,25 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 20px;
+    padding: 20px 0;
 }
 .cardInfo{
-    width: 10rem;
-    margin-bottom: 2rem;
+    width: 150px;
+    width: 20vw;
+    width: 200px;
+    font-size: clamp(100px, 20vw, 200px);
     position: relative;
     border-radius: 10px;
     border: 1px solid var(--borda);
-    padding: 0.5rem;
+    padding: 10px;
 }
 .cardInfo .titulo{
-    font-size: 1.3rem;
+    font-size: clamp(10pt, 2vw, 25pt);
     font-weight: 500;
 }
 .cardInfo p{
-    font-size: 1.2rem;
+    font-size: clamp(8pt, 1.5vw, 20pt);
 }
 .cardInfo div{
     display: flex;
