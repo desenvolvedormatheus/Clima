@@ -8,6 +8,7 @@ header{
     justify-content: space-between;
     margin: 0 30px;
     padding: 20px;
+    border-radius: 10px;
 }
 header form{
     border: 1px solid var(--borda);
@@ -15,6 +16,7 @@ header form{
     margin-right: 1rem;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
 #pesquisa_cidade{
     background: transparent;

@@ -31,7 +31,7 @@ $(document).ready(function() {
         ajustarHora(cidade)
         $("#pesquisa_cidade").val("")
     });
-}); 
+});
 
 // Função que é chamada quando as coordenadas são obtidas com sucesso
 function success(cidade = "guarulhos") {
@@ -49,6 +49,8 @@ function success(cidade = "guarulhos") {
             descricao = "Chuva"
         } else if(descricao === "Clear"){
             descricao = "Sol"
+        } else if(descricao === "Mist"){
+            descricao = "Neblina"
         }
         $("#descricao").html(descricao)
 
@@ -117,7 +119,6 @@ function success(cidade = "guarulhos") {
         const estadoLua = data.weather[0].icon[0];
         const descricaoLua = getDescricaoLua(estadoLua);
         $("#lua").html(descricaoLua)
-
     });
 }
 success()

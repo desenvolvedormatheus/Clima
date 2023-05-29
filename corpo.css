@@ -5,6 +5,7 @@ main{
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border: 1px solid var(--borda);
+    border-radius: 10px;
 }
 .graus_data_cidade{
     display: flex;
