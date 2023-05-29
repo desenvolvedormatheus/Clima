@@ -29,3 +29,12 @@ body{
 	padding: 1rem 0;
 	gap: 20px;
 }
+footer{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+footer a{
+    color: #fff;
+	font-size: 10pt;
+}
