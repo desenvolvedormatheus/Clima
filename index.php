@@ -91,7 +91,7 @@
         </div>
     </main>
     <footer>
-        <a href="https://github.com/desenvolvedormatheus" target="_blank">Matheus P. Souza</a>
+        <a href="https://github.com/desenvolvedormatheus" target="_blank">Matheus p. Souza</a>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous" defer></script>
     <script src="funcoes.js" defer></script>
